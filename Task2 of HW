@@ -1,27 +1,24 @@
-// 1) Вычислить n-ое треугольного число (сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
+// 2) Вывести все простые числа от 1 до 1000
+
 import java.util.Scanner;
 
-public class Main
-{
-	public static void main(String[] args) {
-		System.out.println("Введите число: ");
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите число: ");
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-		for (int i=2;i<num;i++) {
-		    boolean flag1 = true;
-		    for (int j=2;j<i;j++){
-		        
-            if(i%j == 0){
-                flag1 = false;
+        for (int i = 2; i < num; i++) {
+            boolean flag1 = true;
+            for (int j = 2; j < i; j++) {
+
+                if (i % j == 0) {
+                    flag1 = false;
+                }
             }
-            
-		    }
-		 if (flag1 == true){
-		     System.out.println(i + " ");
-		 }
-		     
-		 }
+            if (flag1 == true) {
+                System.out.println(i + " ");
+            }
         }
-        
-	}
+    }
+}
 

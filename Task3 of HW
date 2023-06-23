@@ -1,0 +1,61 @@
+//3) Реализовать простой калькулятор
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		int num1 = num();
+		int num2 = num();
+		char sign = Operation();
+		int result = Rezult( num1, num2, sign);
+        System.out.println("Результат операции: "+result);
+		
+	}
+	
+	public static int num(){
+	    
+        System.out.println("Введите число: ");
+        
+        Scanner scanner = new Scanner(System.in);
+        int result = scanner.nextInt();
+
+        return result;
+    }
+    
+    public static char Operation(){
+        System.out.println("Введите операцию: ");
+        
+        Scanner scanner = new Scanner(System.in);
+        char result = scanner.next().charAt(0);
+        
+        return result;
+    }
+    
+    public static int Rezult(int num1, int num2, char sign){
+        int result = 0;
+        
+        switch (sign){
+            case '+':
+                result = num1+num2;
+                break;
+            case '-':
+                result = num1-num2;
+                break;
+            case '*':
+                result = num1*num2;
+                break;
+            case '/':
+                result = num1/num2;
+                break;
+            default:
+                System.out.println("Неверный ввод");
+            
+        }
+        
+        return result;
+    }
+	
+}
